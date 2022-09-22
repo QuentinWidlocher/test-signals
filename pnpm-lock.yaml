@@ -5,6 +5,7 @@ specifiers:
   '@mantine/core': ^5.4.0
   '@mantine/hooks': ^5.4.0
   '@preact/signals-react': ^1.1.0
+  '@twind/preset-tailwind': 1.0.0-next.38
   '@types/lodash.merge': ^4.6.7
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
@@ -15,6 +16,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   tailwindcss: ^3.1.8
+  twind: 1.0.0-next.38
   typescript: ^4.6.4
   vite: ^3.1.0
 
@@ -23,12 +25,14 @@ dependencies:
   '@mantine/core': 5.4.0_oihobwhbj453cnyslcmpoj2bia
   '@mantine/hooks': 5.4.0_react@18.2.0
   '@preact/signals-react': 1.1.0_react@18.2.0
+  '@twind/preset-tailwind': 1.0.0-next.38_7kmssi6xfszkhsjqdxntfmxmaq
   autoprefixer: 10.4.12_postcss@8.4.16
   lodash.merge: 4.6.2
   postcss: 8.4.16
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tailwindcss: 3.1.8
+  twind: 1.0.0-next.38_typescript@4.8.3
 
 devDependencies:
   '@types/lodash.merge': 4.6.7
@@ -702,6 +706,27 @@ packages:
     dependencies:
       '@babel/runtime': 7.19.0
       react: 18.2.0
+    dev: false
+
+  /@swc/helpers/0.3.17:
+    resolution: {integrity: sha512-tb7Iu+oZ+zWJZ3HJqwx8oNwSDIU440hmVMDPhpACWQWnrZHK99Bxs70gT1L2dnr5Hg50ZRWEFkQCAnOVVV0z1Q==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
+  /@twind/preset-tailwind/1.0.0-next.38_7kmssi6xfszkhsjqdxntfmxmaq:
+    resolution: {integrity: sha512-zo5LDQ/lSaq9tXoh7pWabOeb/QzOW5zHURtcI/jWCrSR3tHgadXNeYg3O1lFljtHOakhFSZ0mmzsNOCbZpRptA==}
+    engines: {node: '>=12.4'}
+    peerDependencies:
+      twind: 1.0.0-next.38
+      typescript: ^4.4.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@swc/helpers': 0.3.17
+      twind: 1.0.0-next.38_typescript@4.8.3
+      typescript: 4.8.3
     dev: false
 
   /@types/lodash.merge/4.6.7:
@@ -1717,11 +1742,24 @@ packages:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: false
 
+  /twind/1.0.0-next.38_typescript@4.8.3:
+    resolution: {integrity: sha512-YqX58zGWiMNmFb4adVKfA9GEwUj7NbS7BTJTbM27qc+e0u5kOHTYLgfFqiKe40XOw40VgVdGwCjwdiXKTc8vKw==}
+    engines: {node: '>=12.4'}
+    peerDependencies:
+      typescript: ^4.4.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@swc/helpers': 0.3.17
+      csstype: 3.1.1
+      typescript: 4.8.3
+    dev: false
+
   /typescript/4.8.3:
     resolution: {integrity: sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /update-browserslist-db/1.0.9_browserslist@4.21.4:
     resolution: {integrity: sha512-/xsqn21EGVdXI3EXSum1Yckj3ZVZugqyOZQ/CxYPBD/R+ko9NSUScf8tFF4dOKY+2pvSSJA/S+5B8s4Zr4kyvg==}
